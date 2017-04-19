@@ -4,7 +4,20 @@
  */
 
 // 流行的屏幕尺寸总是有限的
-$devices: (320px: 32px, 360px: 36px, 375px: 37.5px, 412px: 41.2px, 414px: 41.4px, 768px: 76.8px);
+$devices: (
+  320px: 32px, 
+  360px: 36px, 
+  375px: 37.5px, 
+  412px: 41.2px, 
+  414px: 41.4px, 
+  480px: 48px,
+  560px: 56px,
+  640px: 64px,
+  768px: 76.8px,
+  1024px: 102.4px,
+  1280px: 128px,
+  1340px: 134px,
+  1600px: 160px );
 
 @each $vw, $size in $devices {
   @media (min-width: #{$vw}) {

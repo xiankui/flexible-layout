@@ -17,9 +17,34 @@
 @media (min-width: 414px) {
   html {
     font-size: 41.4px; } }
+@media (min-width: 480px) {
+  html {
+    font-size: 48px; } }
+@media (min-width: 560px) {
+  html {
+    font-size: 56px; } }
+@media (min-width: 640px) {
+  html {
+    font-size: 64px; } }
 @media (min-width: 768px) {
   html {
     font-size: 76.8px; } }
+@media (min-width: 1024px) {
+  html {
+    font-size: 102.4px; } }
+@media (min-width: 1280px) {
+  html {
+    font-size: 128px; } }
+@media (min-width: 1340px) {
+  html {
+    font-size: 134px; } }
+@media (min-width: 1600px) {
+  html {
+    font-size: 160px; } }
+html, body, p {
+  margin: 0;
+  padding: 0; }
+
 body {
   font-size: 12px; }
 

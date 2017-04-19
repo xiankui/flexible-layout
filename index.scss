@@ -1,5 +1,10 @@
 @import 'flex';
 
+html, body, p {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-size: 12px;
 }
