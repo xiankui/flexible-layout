@@ -1,0 +1,88 @@
+/**
+ * media query of viewport for adaptation
+ * 1rem == 10vw
+ */
+@media (min-width: 320px) {
+  html {
+    font-size: 32px; } }
+@media (min-width: 360px) {
+  html {
+    font-size: 36px; } }
+@media (min-width: 375px) {
+  html {
+    font-size: 37.5px; } }
+@media (min-width: 412px) {
+  html {
+    font-size: 41.2px; } }
+@media (min-width: 414px) {
+  html {
+    font-size: 41.4px; } }
+@media (min-width: 768px) {
+  html {
+    font-size: 76.8px; } }
+body {
+  font-size: 12px; }
+
+.show-label {
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px dashed #0aa;
+  font-size: 16px; }
+
+/**
+ * style of wrapper
+ */
+.wrapper {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  width: 100%;
+  background-color: #efefef; }
+
+.item {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1;
+  text-align: center; }
+
+/**
+ * icon is 98px in 750 standard psd
+ * 98px => (10rem / 750) * 98 => 98 * $vw
+ */
+.icon {
+  width: 1.30667rem;
+  height: auto; }
+
+.icon-label {
+  display: block;
+  font-size: 14px; }
+
+.info {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.8; }
+  .info a {
+    color: blue; }
+
+.fork {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  text-align: center; }
+  .fork a {
+    color: blue; }
+
+/*# sourceMappingURL=index.css.map */

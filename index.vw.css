@@ -1,0 +1,48 @@
+/**
+ * 使用flex进行布局
+ * 使用vw进行元素适配
+ */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+}
+
+
+.show-label {
+	padding: 10px 0;
+	text-align: center;
+	border-bottom: 1px dashed #0aa;
+	font-size: 16px;
+}
+
+/**
+ * style of wrapper
+ */
+.wrapper {
+	width: 100%;
+	display: flex;
+	background-color: #efefef;
+}
+
+.item {
+	flex: 1;
+	text-align: center;
+}
+
+/**
+ * icon is 98px in 750 standard psd
+ * 98px => (100vw / 750) * 98 => 13.07vw
+ */
+.icon {
+	width: 13vw;
+	height: auto;
+}
+
+.icon-label {
+	display: block;
+	font-size: 14px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flexible layout</title>
+	<meta name="description" content="flexible layout with css vw" />
+	<meta name="keywords" content="flexible layout css" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<link rel="stylesheet" href="index.vw.css">
+</head>
+<body>
+	<p class="show-label">screen: <span id="screen"></span>px</p>
+	<p class="show-label">window: <span id="window"></span>px</p>
+	<p class="show-label">viewport: <span id="viewport"></span>px</p>
+
+	<div class="wrapper">
+		<div class="item">
+			<img src="img/icon-driver.png" alt="" class="icon">
+			<span class="icon-label">司机</span>
+		</div>
+		<div class="item">
+			<img src="img/icon-material.png" alt="" class="icon">
+			<span class="icon-label">物料</span>
+		</div>
+		<div class="item">
+			<img src="img/icon-tour-entrance.png" alt="" class="icon">
+			<span class="icon-label">景区</span>
+		</div>
+		<div class="item">
+			<img src="img/icon-tour.png" alt="" class="icon">
+			<span class="icon-label">游客</span>
+		</div>
+	</div>
+
+	<script>
+		/**
+		 * 从直觉上来理解 set viewport = device-width 
+		 * 就是使文档平铺在设备屏幕上，并可统一使用css像素单位；消除了设备像素比率（devicePixelRatio）带来的影响
+		 */
+		var $viewport = document.getElementById('viewport'),
+				$window = document.getElementById('window'),
+				$screen = document.getElementById('screen');
+
+		var render = function () {
+			// the same as device-width
+			var s_w = window.screen.width;
+			// browser width
+			var w_w = window.innerWidth;
+			// viewport的功能是用来约束你网站中最顶级包含块元素（containing block）<html>的。
+			var v_w = document.documentElement.clientWidth;
+			
+			// w_w == v_w + scrollbarWidth
+
+			$screen.innerHTML = s_w;
+			$window.innerHTML = w_w;
+			$viewport.innerHTML = v_w;
+		}
+
+		render();
+
+		window.onresize = render;
+	</script>
+</body>
+</html>

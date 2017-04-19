@@ -1,0 +1,62 @@
+@import 'flex';
+
+body {
+  font-size: 12px;
+}
+
+.show-label {
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px dashed #0aa;
+  font-size: 16px;
+}
+
+/**
+ * style of wrapper
+ */
+.wrapper {
+  @include flexible;
+  width: 100%;
+  background-color: #efefef;
+}
+
+.item {
+  @include flex(1);
+  text-align: center;
+}
+
+/**
+ * icon is 98px in 750 standard psd
+ * 98px => (10rem / 750) * 98 => 98 * $vw
+ */
+.icon {
+  width: 98 * $vw;
+  height: auto;
+}
+
+.icon-label {
+  display: block;
+  font-size: 14px;
+}
+
+.info {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+  
+  a {
+    color: blue;
+  }
+}
+
+.fork {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  text-align: center;
+
+  a {
+    color: blue;
+  }
+}
